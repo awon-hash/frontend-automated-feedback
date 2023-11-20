@@ -36,6 +36,9 @@ const Sidebar = () => {
               <li>
                 <NavLink to="/time-table">Time Table</NavLink>
               </li>
+              <li>
+                <NavLink to="/feedback">Feedback</NavLink>
+              </li>
             </ul>
           </li>
         </ul>

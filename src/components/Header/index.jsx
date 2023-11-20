@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -45,9 +46,9 @@ const Header = () => {
 
             <ul className="navbar-nav header-right">
               <li className="nav-item dropdown notification_dropdown">
-                <a
+                <NavLink
                   className="nav-link  ai-icon"
-                  href="#"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
@@ -64,13 +65,13 @@ const Header = () => {
                     />
                   </svg>
                   <div className="pulse-css"></div>
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item dropdown header-profile">
-                <a
+                <NavLink
                   className="nav-link"
-                  href="#"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
@@ -78,10 +79,10 @@ const Header = () => {
                     <span className="text-black">Professor Sana</span>
                     <p className="fs-12 mb-0">Admin</p>
                   </div>
-                  <img src="images/images (1).png" width="20" alt="" />
-                </a>
+                  <img src="./images/images (1).png" width="20" alt="" />
+                </NavLink>
                 <div className="dropdown-menu dropdown-menu-end">
-                  <a href="app-profile.html" className="dropdown-item ai-icon">
+                  <NavLink to="/profile" className="dropdown-item ai-icon">
                     <svg
                       id="icon-user1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,9 +100,9 @@ const Header = () => {
                       <circle cx="12" cy="7" r="4"></circle>
                     </svg>
                     <span className="ms-2">Profile </span>
-                  </a>
+                  </NavLink>
 
-                  <a href="page-login.html" className="dropdown-item ai-icon">
+                  <NavLink to="/signin" className="dropdown-item ai-icon">
                     <svg
                       id="icon-logout"
                       xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +121,7 @@ const Header = () => {
                       <line x1="21" y1="12" x2="9" y2="12"></line>
                     </svg>
                     <span className="ms-2">Logout </span>
-                  </a>
+                  </NavLink>
                 </div>
               </li>
             </ul>

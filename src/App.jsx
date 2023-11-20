@@ -9,7 +9,9 @@ import RecordAttendance from "./pages/RecordAttendance";
 import GradeManagement from "./pages/GradeManagement";
 import MakeAssignment from "./pages/MakeAssignment";
 import TimeTable from "./pages/TimeTable";
+import Profile from "./pages/Profile";
 import "./App.css";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path="/signin" element={<Login />} />
       <Route path="/forgetpassword" element={<ForgetPassword />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/feedback" element={<Feedback />} />
     </Routes>
   );
 }

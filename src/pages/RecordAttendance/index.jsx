@@ -5,7 +5,13 @@ const RecordAttendance = () => {
   return (
     <>
       <Navbar />
-      <div>RecordAttendance</div>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6 offset-4">
+           <h2>QR Code</h2>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
