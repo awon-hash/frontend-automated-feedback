@@ -3,13 +3,18 @@ import Navbar from "../../components/Navbar";
 import "./style.css";
 
 const Feedback = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    }
+
   return (
     <>
       <Navbar />
       <div className="page container">
         <div className="row">
           <div className="col-sm-8 offset-3">
-            <form class="row g-3">
+            <form class="row g-3" onSubmit={handleSubmit}>
               <div class="col-md-6">
                 <label for="Teacher" class="form-label">
                   Teacher Name
