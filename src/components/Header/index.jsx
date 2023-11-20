@@ -79,10 +79,10 @@ const Header = () => {
                     <span className="text-black">Professor Sana</span>
                     <p className="fs-12 mb-0">Admin</p>
                   </div>
-                  <img src="./images/images (1).png" width="20" alt="" />
+                  <img src="images/images (1).png" width="20" alt="" />
                 </NavLink>
                 <div className="dropdown-menu dropdown-menu-end">
-                  <NavLink to="/profile" className="dropdown-item ai-icon">
+                  <NavLink to="/profile" className="dropdown-item">
                     <svg
                       id="icon-user1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,10 +99,10 @@ const Header = () => {
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                       <circle cx="12" cy="7" r="4"></circle>
                     </svg>
-                    <span className="ms-2">Profile </span>
+                    <span className="ms-2">Profile</span>
                   </NavLink>
 
-                  <NavLink to="/signin" className="dropdown-item ai-icon">
+                  <NavLink to="/signin" className="dropdown-item">
                     <svg
                       id="icon-logout"
                       xmlns="http://www.w3.org/2000/svg"
