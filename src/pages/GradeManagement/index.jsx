@@ -6,7 +6,7 @@ const GradeManagement = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="page container">
         <div className="row">
           <div className="col-sm-6 offset-4">
             <table class="table table-striped">

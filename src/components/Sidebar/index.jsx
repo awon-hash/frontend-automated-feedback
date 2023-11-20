@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./style.css";
 
 const Sidebar = () => {
   return (
@@ -17,7 +18,9 @@ const Sidebar = () => {
             </NavLink>
             <ul aria-expanded="false">
               <li>
-                <NavLink to="/">Dashboard</NavLink>
+                <NavLink to="/" activeClassName="active" exact>
+                  Dashboard
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/attendance-management">

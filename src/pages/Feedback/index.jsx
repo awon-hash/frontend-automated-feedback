@@ -6,7 +6,7 @@ const Feedback = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="page container">
         <div className="row">
           <div className="col-sm-8 offset-3">
             <form class="row g-3">
