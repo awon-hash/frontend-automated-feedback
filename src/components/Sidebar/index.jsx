@@ -1,36 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../AuthProvider";
 
-const Sidebar = ({ role }) => {
+const Sidebar = () => {
+  const { selectedRole, setRole } = useAuth();
+
   const getSidebarContent = () => {
-    switch (role) {
+    switch (selectedRole) {
       case "teacher":
         return (
           <>
-            <li>
-              <NavLink to="/dashboard" activeClassName="active" exact>
-                Dashboard
-              </NavLink>
-            </li>
             <li>
               <NavLink to="/attendance-management">
                 Attendance Management
               </NavLink>
             </li>
             <li>
-              <NavLink to="/record-attendance">Record Attendance</NavLink>
-            </li>
-            <li>
               <NavLink to="/grades">Grades Management</NavLink>
             </li>
             <li>
-              <NavLink to="/make-assignment">Make Assignment</NavLink>
+              <NavLink to="/post-assignment">Post Assignment</NavLink>
             </li>
             <li>
               <NavLink to="/time-table">Time Table</NavLink>
-            </li>
-            <li>
-              <NavLink to="/feedback">Feedback</NavLink>
             </li>
           </>
         );
@@ -38,23 +30,16 @@ const Sidebar = ({ role }) => {
         return (
           <>
             <li>
-              <NavLink to="/dashboard" activeClassName="active" exact>
-                Dashboard
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/attendance-management">
-                Attendance Management
-              </NavLink>
+              <NavLink to="/view-attendance">View Attendance</NavLink>
             </li>
             <li>
               <NavLink to="/record-attendance">Record Attendance</NavLink>
             </li>
             <li>
-              <NavLink to="/grades">Grades Management</NavLink>
+              <NavLink to="/view-grades">Grades</NavLink>
             </li>
             <li>
-              <NavLink to="/make-assignment">Make Assignment</NavLink>
+              <NavLink to="/make-assignment">Assignment</NavLink>
             </li>
             <li>
               <NavLink to="/time-table">Time Table</NavLink>
@@ -69,29 +54,16 @@ const Sidebar = ({ role }) => {
         return (
           <>
             <li>
-              <NavLink to="/dashboard" activeClassName="active" exact>
-                Dashboard
-              </NavLink>
+              <NavLink to="/record-Record">Record Feedbacks</NavLink>
             </li>
             <li>
-              <NavLink to="/attendance-management">
-                Attendance Management
-              </NavLink>
+              <NavLink to="/make-timetable">Make TimeTable</NavLink>
             </li>
             <li>
-              <NavLink to="/record-attendance">Record Attendance</NavLink>
+              <NavLink to="/add-student">Add New Student</NavLink>
             </li>
             <li>
-              <NavLink to="/grades">Grades Management</NavLink>
-            </li>
-            <li>
-              <NavLink to="/make-assignment">Make Assignment</NavLink>
-            </li>
-            <li>
-              <NavLink to="/time-table">Time Table</NavLink>
-            </li>
-            <li>
-              <NavLink to="/feedback">Feedback</NavLink>
+              <NavLink to="/add-teacher">Add New Teacher</NavLink>
             </li>
           </>
         );
@@ -108,7 +80,7 @@ const Sidebar = ({ role }) => {
           <li>
             <NavLink
               className="has-arrow ai-icon"
-              to="javascript:void()"
+              to="/dashboard"
               aria-expanded="false"
             >
               <i className="flaticon-dashboard-1"></i>

@@ -1,26 +1,27 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import { useAuth } from "../../components/AuthProvider";
 import "./style.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
-  const [selectedRole, setSelectedRole] = useState("Student");
+  const { selectedRole, setRole } = useAuth();
 
-  const nevigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default form submission and page reload
-    // Add your authentication logic here
+    e.preventDefault();
+
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", selectedRole);
 
-    // Assume a simple login check for demonstration
     if (email === "example@example.com" && password === "password") {
       // Navigate to the /dashboard route on successful login
-      nevigate("/dashboard");
+      setRole(selectedRole.toLowerCase());
+      navigate("/dashboard");
     } else {
       // Handle unsuccessful login (show error message, etc.)
       setLoginError(true);
@@ -75,9 +76,7 @@ const Login = () => {
                         <select
                           className="form-control"
                           value={selectedRole}
-                          onChange={(event) =>
-                            setSelectedRole(event.target.value)
-                          }
+                          onChange={(event) => setRole(event.target.value)}
                         >
                           <option value="student">Student</option>
                           <option value="teacher">Teacher</option>
@@ -101,9 +100,7 @@ const Login = () => {
                           </div>
                         </div>
                         <div className="form-group">
-                          <a href="page-forgot-password.html">
-                            Forgot Password?
-                          </a>
+                          <a href="/forgetpassword">Forgot Password?</a>
                         </div>
                       </div>
                       <div className="text-center">

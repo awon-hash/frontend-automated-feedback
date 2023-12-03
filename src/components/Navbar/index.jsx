@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <NavHeader />
       <Header />
-      <Sidebar />
+      <Sidebar/>
     </>
   );
 };
