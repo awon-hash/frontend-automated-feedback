@@ -17,7 +17,7 @@ const Sidebar = () => {
             </NavLink>
             <ul aria-expanded="false">
               <li>
-                <NavLink to="/" activeClassName="active" exact>
+                <NavLink to="/dashboard" activeClassName="active" exact>
                   Dashboard
                 </NavLink>
               </li>
